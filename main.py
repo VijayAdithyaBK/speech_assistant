@@ -65,6 +65,6 @@ time.sleep(1)
 guruji_speaks('I am listening..')
 while 1:
     voice_data = record_audio()
-    # print your voice/command
-    print(voice_data)
+    # # print your voice/command
+    # print(voice_data)
     respond(voice_data)
