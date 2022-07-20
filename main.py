@@ -60,9 +60,15 @@ def respond(voice_data):
     if 'exit' or 'bye' in  voice_data:
         guruji_speaks('bye!')
         exit()
+    if 'listen' in voice_data:
+        rant = record_audio('Tell me what it is')
+        if 'I am done' in rant:
+            guruji_speaks('okay')
+        else:
+            rant = record_audio('continue')
 
 time.sleep(1)
-guruji_speaks('I am listening..')
+guruji_speaks('Ask Guruji what you need to know..')
 while 1:
     voice_data = record_audio()
     # # print your voice/command
